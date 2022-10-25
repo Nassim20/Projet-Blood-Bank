@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: #EAF3FA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
+   <children>
+      <AnchorPane fx:id="anchorRoot" minHeight="580.0" minWidth="1000.0" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: #EAF3FA;">
+         <children>
+            <ImageView fitHeight="384.0" fitWidth="393.0" layoutX="315.0" layoutY="180.0" opacity="0.8" smooth="false">
+               <image>
+                  <Image url="@../images/19198095.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="950.0" layoutY="8.0" onAction="#closeAction" prefHeight="42.0" prefWidth="41.0" ripplerFill="#afc3fe" style="-fx-background-color: #D36483; -fx-background-radius: 20px;" text="X" />
+            <AnchorPane layoutX="80.0" layoutY="98.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="RVbutton" buttonType="RAISED" layoutX="20.0" layoutY="25.0" onAction="#loadRV" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e35b54" style="-fx-background-color: #AFC3FE #AFC3FE; -fx-background-radius: 55px;" text="Rendez vous">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="142.0" layoutY="338.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="DonsButton" buttonType="RAISED" layoutX="20.0" layoutY="27.0" onAction="#loadDons" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e35b54" style="-fx-background-color: #AFC3FE; -fx-background-radius: 55px;" text="Dons" viewOrder="3.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="740.0" layoutY="338.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="donneurButton" buttonType="RAISED" layoutX="20.0" layoutY="27.0" onAction="#loadDonneur" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e35b54" style="-fx-background-color: #AFC3FE; -fx-background-radius: 55px;" text="Donneur">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="301.0" layoutY="14.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="eventButton" buttonType="RAISED" layoutX="20.0" layoutY="27.0" onAction="#loadEvent" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e35b54" style="-fx-background-color: #AFC3FE #AFC3FE; -fx-background-radius: 55px;" text="Events">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="573.0" layoutY="14.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="stockButton" buttonType="RAISED" layoutX="20.0" layoutY="27.0" onAction="#loadStock" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e52e2e" style="-fx-background-color: #AFC3FE #AFC3FE; -fx-background-radius: 55px;" text="Stock">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="776.0" layoutY="81.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="historiqueButton" buttonType="RAISED" layoutX="20.0" layoutY="27.0" onAction="#loadhistorique" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e52e2e" style="-fx-background-color: #AFC3FE #AFC3FE; -fx-background-radius: 55px;" text="historique">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="466.0" layoutY="282.0" prefHeight="165.0" prefWidth="154.0" style="-fx-background-color: #FFFF; -fx-background-radius: 90px;">
+               <children>
+                  <JFXButton fx:id="demandeButton" buttonType="RAISED" layoutX="20.0" layoutY="27.0" onAction="#loadDemmande" prefHeight="111.0" prefWidth="114.0" ripplerFill="#e35b54" style="-fx-background-color: #AFC3FE; -fx-background-radius: 55px;" text="Demandes">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

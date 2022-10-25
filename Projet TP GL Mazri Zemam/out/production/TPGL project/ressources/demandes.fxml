@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: #EAF3FA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.demandesController">
+   <children>
+      <AnchorPane fx:id="anchorRoot2" minHeight="580.0" minWidth="1000.0" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: #EAF3FA;">
+         <children>
+            <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="956.0" layoutY="14.0" onAction="#closeAction" prefHeight="30.0" prefWidth="33.0" ripplerFill="#afc3fe" style="-fx-background-color: #D36483; -fx-background-radius: 20px;" text="X" />
+            <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="956.0" layoutY="60.0" onAction="#loadHome" prefHeight="30.0" prefWidth="33.0" ripplerFill="#4665f0" style="-fx-background-color: #AFC3FE; -fx-background-radius: 20px;" text="H" />
+            <AnchorPane layoutX="14.0" layoutY="20.0" prefHeight="551.0" prefWidth="340.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <JFXButton fx:id="ajoutbutton" buttonType="RAISED" layoutX="30.0" layoutY="468.0" onAction="#AddDemandeAction" prefHeight="25.0" prefWidth="280.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="Ajouter ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="annulerbutton" buttonType="RAISED" layoutX="218.0" layoutY="508.0" onAction="#AnnullerAction" prefHeight="29.0" prefWidth="88.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="Annuler ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="warninglabele" alignment="CENTER" layoutX="10.0" layoutY="449.0" prefHeight="19.0" prefWidth="320.0" textFill="RED">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="samgfield" focusColor="#f8645a" layoutX="153.0" layoutY="409.0" promptText="sang" />
+                  <JFXTextField fx:id="idfield" focusColor="#e35b56" layoutX="55.0" layoutY="107.0" prefHeight="29.0" prefWidth="247.0" promptText="id demande ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView layoutX="16.0" layoutY="109.0">
+                     <image>
+                        <Image url="@../images/icons8_camera_addon_identification_24px_1.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="namefield" focusColor="#e35b56" layoutX="55.0" layoutY="170.0" prefHeight="29.0" prefWidth="247.0" promptText="nom demandeur ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView layoutX="15.0" layoutY="171.0">
+                     <image>
+                        <Image url="@../images/icons8_name_26px_1.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="phonefield" focusColor="#e35b56" layoutX="55.0" layoutY="231.0" prefHeight="25.0" prefWidth="247.0" promptText="numero telephone ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView layoutX="13.0" layoutY="233.0">
+                     <image>
+                        <Image url="@../images/icons8_phone_24px_1.png" />
+                     </image>
+                  </ImageView>
+                  <JFXComboBox fx:id="statefield" focusColor="#f8645a" layoutX="249.0" layoutY="360.0" promptText="etat " />
+                  <JFXComboBox fx:id="typefield" focusColor="#f8645a" layoutX="55.0" layoutY="409.0" maxHeight="25.0" maxWidth="68.0" minHeight="25.0" minWidth="68.0" prefHeight="25.0" prefWidth="68.0" promptText="type " />
+                  <JFXTextField fx:id="hospitalfield" focusColor="#f8645a" layoutX="55.0" layoutY="291.0" prefHeight="30.0" prefWidth="263.0" promptText="nom hopital">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <DatePicker fx:id="dateField" layoutX="55.0" layoutY="360.0" promptText="date " style="-fx-background-color: #ffff;" />
+                  <JFXTextField fx:id="nbsacField" focusColor="#f8645a" layoutX="249.0" layoutY="409.0" prefHeight="25.0" prefWidth="56.0" promptText="Nbr sac" />
+                  <ImageView layoutX="15.0" layoutY="295.0">
+                     <image>
+                        <Image url="@../images/icons8_hospital_3_26px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="13.0" layoutY="410.0">
+                     <image>
+                        <Image url="@../images/icons8_drop_of_blood_24px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="12.0" layoutY="360.0">
+                     <image>
+                        <Image url="@../images/icons8_event_26px_3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="130.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../images/icons8_demand_80px_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="demandeTable" layoutX="407.0" layoutY="155.0" onMouseClicked="#getSelected" prefHeight="359.0" prefWidth="585.0">
+              <columns>
+                <TableColumn fx:id="idDemande" prefWidth="48.0" text="id demande" />
+                <TableColumn fx:id="nomPrenomDemande" prefWidth="75.20001220703125" text="nom prenom" />
+                  <TableColumn fx:id="hopitalDemande" prefWidth="78.0" text="hopital" />
+                  <TableColumn fx:id="typeDemande" prefWidth="70.0" text="type" />
+                  <TableColumn fx:id="groupeDemande" prefWidth="58.0" text="groupe " />
+                  <TableColumn fx:id="etatsDemande" prefWidth="57.60003662109375" text="etats " />
+                  <TableColumn fx:id="urgentDemande" prefWidth="72.0" text="urgent/non" />
+                  <TableColumn fx:id="nombreSack" prefWidth="55.199951171875" text="nbr" />
+                  <TableColumn fx:id="contactDemande" minWidth="0.0" prefWidth="116.800048828125" text="contact " />
+                  <TableColumn fx:id="dateDemande" prefWidth="95.2000732421875" text="Date" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="418.0" layoutY="20.0" prefHeight="124.0" prefWidth="499.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <JFXTextField fx:id="idrech" focusColor="#e35b56" layoutX="71.0" layoutY="33.0" prefHeight="29.0" prefWidth="109.0" promptText="id demande ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="state1field" focusColor="#f8645a" layoutX="71.0" layoutY="83.0" prefHeight="25.0" prefWidth="109.0" promptText="etat " />
+                  <JFXButton fx:id="recherchbutt" buttonType="RAISED" layoutX="283.0" layoutY="33.0" onAction="#rechDemande" prefHeight="29.0" prefWidth="152.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="rechreche demande ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="filterbutt" buttonType="RAISED" layoutX="283.0" layoutY="81.0" onAction="#filtreDemande" prefHeight="29.0" prefWidth="152.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="filtrer demande ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView layoutX="13.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../images/icons8_search_property_26px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="warninglabele1" alignment="CENTER" layoutX="117.0" layoutY="4.0" prefHeight="19.0" prefWidth="320.0" textFill="RED">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="approveButt" buttonType="RAISED" layoutX="804.0" layoutY="514.0" onAction="#approuveDemande" prefHeight="29.0" prefWidth="152.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="Approuve">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="supButt" buttonType="RAISED" layoutX="610.0" layoutY="514.0" onAction="#livSuppDemande" prefHeight="29.0" prefWidth="152.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="livrer et suprimer ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="verifierStockbutt" buttonType="RAISED" layoutX="418.0" layoutY="514.0" onAction="#gotoVerifStock" prefHeight="29.0" prefWidth="152.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="verifier stock ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</StackPane>

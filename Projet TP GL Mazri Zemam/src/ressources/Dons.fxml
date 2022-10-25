@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer2" maxHeight="580.0" maxWidth="1000.0" minHeight="580.0" minWidth="1000.0" prefHeight="580.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DonsConterller">
+   <children>
+      <AnchorPane fx:id="anchorRoot2" maxHeight="580.0" maxWidth="1000.0" minHeight="580.0" minWidth="1000.0" prefHeight="580.0" prefWidth="1000.0" style="-fx-background-color: #EAF3FA;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="508.0" prefWidth="362.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <JFXTextField fx:id="idfield" focusColor="#f8645a" layoutX="84.0" layoutY="111.0" prefHeight="30.0" prefWidth="263.0" promptText="id donateur ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="docnamefield" focusColor="#f8645a" layoutX="76.0" layoutY="205.0" prefHeight="30.0" prefWidth="263.0" promptText="Nom docteur/infermier ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="grsangField" focusColor="#f8645a" layoutX="77.0" layoutY="311.0" prefHeight="25.0" prefWidth="82.0" promptText="gr sanguing " />
+                  <DatePicker fx:id="dateField" layoutX="77.0" layoutY="365.0" promptText="date " style="-fx-background-color: #ffff;" />
+                  <JFXTextField fx:id="hospitalfield" focusColor="#f8645a" layoutX="77.0" layoutY="256.0" prefHeight="30.0" prefWidth="263.0" promptText="nom hopital">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="ajoutButton" buttonType="RAISED" layoutX="32.0" layoutY="427.0" onAction="#createDonAction" prefHeight="30.0" prefWidth="280.0" ripplerFill="#f8645a" style="-fx-background-color: #AFC3FE;" text="ajouter ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="annulerButton" buttonType="RAISED" layoutX="247.0" layoutY="469.0" onAction="#AnnullerAction" prefHeight="25.0" prefWidth="65.0" ripplerFill="#f8645a" style="-fx-background-color: #AFC3FE;" text="annuler" />
+                  <ImageView layoutX="122.0">
+                     <image>
+                        <Image url="@../images/icons8_diabetes_100px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="25.0" layoutY="113.0">
+                     <image>
+                        <Image url="@../images/icons8_name_26px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="25.0" layoutY="208.0">
+                     <image>
+                        <Image url="@../images/icons8_doctor_male_24px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="25.0" layoutY="258.0">
+                     <image>
+                        <Image url="@../images/icons8_hospital_3_26px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="26.0" layoutY="312.0">
+                     <image>
+                        <Image url="@../images/icons8_drop_of_blood_24px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="25.0" layoutY="365.0">
+                     <image>
+                        <Image url="@../images/icons8_event_26px_3.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="namefield" focusColor="#f8645a" layoutX="78.0" layoutY="162.0" prefHeight="30.0" prefWidth="263.0" promptText="Nom donateur ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="25.0" layoutY="164.0">
+                     <image>
+                        <Image url="@../images/icons8_name_26px_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="warninglabele" alignment="CENTER" layoutX="17.0" layoutY="408.0" prefHeight="19.0" prefWidth="311.0" textFill="RED">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="Typedons" focusColor="#f8645a" layoutX="181.0" layoutY="312.0" prefHeight="25.0" prefWidth="111.0" promptText="Type " />
+                  <JFXTextField fx:id="nbrsac" focusColor="#f8645a" layoutX="308.0" layoutY="309.0" prefHeight="30.0" prefWidth="41.0" promptText="nbr">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="440.0" layoutY="49.0" prefHeight="69.0" prefWidth="500.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <JFXTextField fx:id="rechDonField" focusColor="#f8645a" layoutX="95.0" layoutY="16.0" prefHeight="30.0" prefWidth="186.0" promptText="nom donateur">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="donRechButt" buttonType="RAISED" layoutX="308.0" layoutY="16.0" onAction="#rechDon" prefHeight="30.0" prefWidth="178.0" ripplerFill="#e35b56" style="-fx-background-color: #AFC3FE;" text="Rechereche">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView layoutX="29.0" layoutY="18.0">
+                     <image>
+                        <Image url="@../images/icons8_search_property_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="donTable" layoutX="407.0" layoutY="132.0" prefHeight="389.0" prefWidth="567.0" style="-fx-background-color: #ffff;">
+              <columns>
+                <TableColumn fx:id="id_Don" prefWidth="60.0" text="id" />
+                <TableColumn fx:id="nom_don" prefWidth="78.0" text="nom" />
+                  <TableColumn fx:id="nom_doc" prefWidth="88.0" text="nom docteur " />
+                  <TableColumn fx:id="nom_hop" prefWidth="95.0" text="nom hopital" />
+                  <TableColumn fx:id="sang_don" prefWidth="49.0" text="sang" />
+                  <TableColumn fx:id="type_don" prefWidth="62.0" text="type " />
+                  <TableColumn fx:id="date_don" minWidth="0.0" prefWidth="83.199951171875" text="date " />
+                  <TableColumn fx:id="nbr_sac_don" minWidth="0.0" prefWidth="50.0" text="nbr Sac" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="953.0" layoutY="54.0" onAction="#loadHome" prefHeight="30.0" prefWidth="33.0" ripplerFill="#4665f0" style="-fx-background-color: #AFC3FE; -fx-background-radius: 20px;" text="H" />
+            <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="953.0" layoutY="14.0" onAction="#closeAction" prefHeight="30.0" prefWidth="33.0" ripplerFill="#afc3fe" style="-fx-background-color: #D36483; -fx-background-radius: 20px;" text="X" />
+            <Label fx:id="warninglabele1" alignment="CENTER" layoutX="534.0" layoutY="109.0" prefHeight="19.0" prefWidth="311.0" textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

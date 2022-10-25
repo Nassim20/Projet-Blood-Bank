@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="581.0" minWidth="999.0" prefHeight="581.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gesDeStockController">
+   <children>
+      <AnchorPane fx:id="anchorRoot2" prefHeight="473.0" prefWidth="594.0" style="-fx-background-color: #EAF3FA;">
+         <children>
+            <TableView fx:id="table_stock" layoutX="156.0" layoutY="175.0" onMouseClicked="#getSelected" prefHeight="353.0" prefWidth="642.0">
+              <columns>
+                  <TableColumn fx:id="id_stock" minWidth="0.0" prefWidth="51.20001220703125" text="NumP" />
+                <TableColumn fx:id="nom_donneur_stock" prefWidth="184.79998779296875" text="Nom du Donneur" />
+                <TableColumn fx:id="groupSanguinStock" minWidth="0.0" prefWidth="79.0" text="GroupS" />
+                  <TableColumn fx:id="typeDon" minWidth="0.0" prefWidth="134.0" text="Type de Donnation" />
+                  <TableColumn fx:id="dateDon" minWidth="0.0" prefWidth="104.800048828125" text="Date du don" />
+                  <TableColumn fx:id="nbrStock" prefWidth="85.60001220703123" text="nombre pack" />
+              </columns>
+               <opaqueInsets>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </opaqueInsets>
+            </TableView>
+            <JFXButton fx:id="supprimStockButt" buttonType="RAISED" layoutX="559.0" layoutY="528.0" onAction="#suppStock" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #AFC3FE #AFC3FE;" text="Supprimer  Selection" />
+            <AnchorPane layoutX="23.0" layoutY="21.0" prefHeight="133.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <JFXTextField layoutX="27.0" layoutY="35.0" prefHeight="26.0" prefWidth="70.0" text="Filtre" />
+                  <ComboBox fx:id="comboGroupRech" layoutX="123.0" layoutY="35.0" prefHeight="26.0" prefWidth="131.0" promptText="type Donation" style="-fx-background-color: #ffff;" />
+                  <ComboBox fx:id="gs" layoutX="14.0" layoutY="79.0" prefHeight="26.0" prefWidth="131.0" promptText="Groupe Sanguin" style="-fx-background-color: #ffff;" />
+                  <JFXButton fx:id="valid_Recherche" buttonType="RAISED" layoutX="164.0" layoutY="79.0" onAction="#filtrerTable" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #AFC3FE #AFC3FE;" text="Filtrer" />
+                  <Line endX="67.0" layoutX="159.0" layoutY="61.0" startX="-35.0" />
+                  <Line endX="67.0" layoutX="50.0" layoutY="105.0" startX="-35.0" />
+                  <ImageView layoutX="1.0" layoutY="1.0">
+                     <image>
+                        <Image url="@../images/icons8_search_property_26px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="669.0" layoutY="23.0" prefHeight="133.0" prefWidth="310.0" style="-fx-background-color: #Ffffff;">
+               <children>
+                  <ComboBox fx:id="comboGroupe" layoutX="140.0" layoutY="36.0" prefHeight="26.0" prefWidth="150.0" promptText="Groupe Sanguin" style="-fx-background-color: #ffff;" />
+                  <JFXTextField layoutX="15.0" layoutY="37.0" prefHeight="26.0" prefWidth="110.0" text="Demande de stock" />
+                  <TextField fx:id="stockText" layoutX="15.0" layoutY="85.0" prefHeight="26.0" prefWidth="110.0" />
+                  <JFXButton fx:id="affiche_stock" buttonType="RAISED" layoutX="160.0" layoutY="85.0" onAction="#affiche_stockGs" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #AFC3FE #AFC3FE;" text="Afficher" />
+                  <Line endX="67.0" layoutX="182.0" layoutY="62.0" startX="-35.0" />
+                  <ImageView layoutX="7.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../images/icons8_ask_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="345.0" layoutY="21.0" prefHeight="133.0" prefWidth="310.0" style="-fx-background-color: #Ffffff;">
+               <children>
+                  <ComboBox fx:id="comboGroupe1" layoutX="146.0" layoutY="37.0" prefHeight="26.0" prefWidth="150.0" promptText="Type Donation" style="-fx-background-color: #ffff;" />
+                  <JFXTextField layoutX="14.0" layoutY="37.0" prefHeight="26.0" prefWidth="110.0" text="Demande de stock" />
+                  <TextField fx:id="stockText1" layoutX="22.0" layoutY="85.0" prefHeight="26.0" prefWidth="110.0" />
+                  <JFXButton fx:id="affiche_stock1" buttonType="RAISED" layoutX="171.0" layoutY="85.0" onAction="#affiche_stockTd" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #AFC3FE #AFC3FE;" text="Afficher" />
+                  <Line endX="67.0" layoutX="191.0" layoutY="66.0" startX="-35.0" />
+                  <ImageView layoutX="2.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../images/icons8_ask_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="512.0" layoutY="528.0">
+               <image>
+                  <Image url="@../images/icons8_rh-_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="-18.0" layoutY="290.0">
+               <image>
+                  <Image url="@../images/pngwing.com.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="889.0" layoutY="328.0" onAction="#loadHome" prefHeight="34.0" prefWidth="38.0" ripplerFill="#4665f0" style="-fx-background-color: #AFC3FE; -fx-background-radius: 20px;" text="H" />
+            <Label fx:id="warninglabele" alignment="CENTER" layoutX="341.0" layoutY="538.0" prefHeight="19.0" prefWidth="158.0" textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="889.0" layoutY="257.0" onAction="#closeAction" prefHeight="34.0" prefWidth="38.0" ripplerFill="#afc3fe" style="-fx-background-color: #D36483; -fx-background-radius: 20px;" text="X" />
+            <JFXButton fx:id="supprimStockButt1" buttonType="RAISED" layoutX="156.0" layoutY="528.0" onAction="#suppStockPeri" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #AFC3FE #AFC3FE;" text="Supprimer stock périmé" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

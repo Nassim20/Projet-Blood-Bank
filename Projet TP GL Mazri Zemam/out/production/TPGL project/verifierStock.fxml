@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="328.0" prefWidth="536.0" style="-fx-background-color: #EAF3FA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.verifierStockController">
+   <children>
+      <AnchorPane layoutX="52.0" layoutY="32.0" prefHeight="265.0" prefWidth="250.0" style="-fx-background-color: #ffff;">
+         <children>
+            <TextField fx:id="stockText1" layoutX="64.0" layoutY="157.0" prefHeight="93.0" prefWidth="110.0">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </TextField>
+            <JFXComboBox fx:id="typefield" focusColor="#f8645a" layoutX="39.0" layoutY="20.0" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="68.0" prefHeight="25.0" prefWidth="150.0" promptText="type demande " />
+            <JFXComboBox fx:id="grpsang" focusColor="#f8645a" layoutX="39.0" layoutY="63.0" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="68.0" prefHeight="25.0" prefWidth="150.0" promptText="groupe sanguing" />
+            <JFXButton fx:id="affiche_stock1" buttonType="RAISED" layoutX="39.0" layoutY="105.0" onAction="#affiche_stockGs" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #AFC3FE #AFC3FE;" text="Afficher" />
+            <ImageView layoutX="9.0" layoutY="23.0">
+               <image>
+                  <Image url="@../images/icons8_drop_of_blood_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="7.0" layoutY="69.0">
+               <image>
+                  <Image url="@../images/icons8_drop_of_blood_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="36.0" layoutX="162.0" layoutY="105.0">
+               <image>
+                  <Image url="@../images/icons8_show_property_50px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="9.0" layoutY="180.0">
+               <image>
+                  <Image url="@../images/icons8_drop_of_blood_48px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="229.0" fitWidth="231.0" layoutX="302.0" layoutY="68.0">
+         <image>
+            <Image url="@../images/pngwing.com.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="495.0" layoutY="8.0" onAction="#closeAction" prefHeight="34.0" prefWidth="38.0" ripplerFill="#afc3fe" style="-fx-background-color: #D36483; -fx-background-radius: 20px;" text="X" />
+   </children>
+</AnchorPane>
